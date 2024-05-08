@@ -1,0 +1,284 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    background: linear-gradient(#2b1055,#000064);
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+  background: linear-gradient(to bottom left, #440479 40%, #15015e 100%);
+}
+
+.card_title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}
+.made_by{
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 35px;
+  text-align: center;
+}
+
+
+
+
+
+
+header{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding:30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+header .logo{
+    color:#fff;
+    font-weight:700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a{
+    text-decoration: none;
+    color:#fff;
+    padding: 6px 15px;
+}
+
+header ul li a:hover{
+    background: #fff;
+    color:#2b1055;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+   
+    z-index: 999999;
+  }
+section img{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section img#moon{
+    mix-blend-mode: screen;
+}
+section img#mountains_front{
+    z-index: 10;
+}
+#text{
+position: absolute;
+color:#fff;
+white-space: nowrap;
+font-size: 7.5vw;
+z-index: 9999;
+right: -350px;
+}
+#btn{
+    text-decoration: none;
+    color:#2b1055;
+    background: #fff;
+    padding: 8px 30px;
+    border-radius: 40px;
+    display: inline-block;
+    transform: translateY(100px);
+    z-index: 11;
+    width: 300px;
+    font-family: Poppins;
+}
+.sec{ 
+    position: relative;
+    padding:100px;
+    background: #250858;
+    z-index: 10000;
+ 
+}
+.sec h2{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color:#fff
+}
+.sec p{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color:#fff
+}
+/* header styles for mobile */
+@media screen and (max-width: 768px) {
+    header {
+      padding: 20px;
+    }
+    
+    header .logo {
+      font-size: 1.1em;
+    }
+    
+    header ul {
+      display: none;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background-color: #2b1055;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    header ul li {
+      margin: 10px 0;
+    }
+    
+    header ul li a {
+      padding: 10px;
+      border-radius: 5px;
+    }
+    
+    header .menu-icon {
+      display: block;
+      color: #fff;
+      font-size: 2em;
+      cursor: pointer;
+    }
+    
+    header .menu-icon:hover {
+      color: #ccc;
+    }
+    
+    header .menu-icon.active {
+      color: #ccc;
+    }
+    
+    header ul.show {
+      display: flex;
+    }
+    .sec {
+        padding: 50px;
+      }
+      
+      .sec h2 {
+        font-size: 2.5em;
+      }
+      
+      .sec p {
+        font-size: 1.2em;
+      }    
+  }
